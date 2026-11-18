@@ -30,7 +30,7 @@
     .carousel-shell{position:relative;padding:0 48px}.carousel-viewport{overflow-x:auto;overflow-y:hidden;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;overscroll-behavior-x:contain;outline:none}.carousel-viewport::-webkit-scrollbar{display:none}.work-grid{display:flex;flex-wrap:nowrap;align-items:stretch;gap:14px;width:max-content;min-width:100%;padding:3px 2px 14px}.work-card{flex:0 0 260px;width:260px;min-width:0;border:1px solid rgba(255,255,255,.09);background:var(--panel);border-radius:18px;overflow:hidden;transition:border-color .3s,box-shadow .3s;scroll-snap-align:start}.work-card:hover{border-color:var(--line);box-shadow:0 18px 45px rgba(0,0,0,.25)}.work-card[hidden]{display:none}.work-media{height:auto;aspect-ratio:9/16;position:relative;overflow:hidden;background:radial-gradient(circle at 65% 40%,rgba(201,169,110,.2),transparent 35%),linear-gradient(135deg,#242019,#0c0c0b 70%);display:grid;place-items:center}.work-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.42),transparent 48%);pointer-events:none}.work-art{font:800 clamp(2.7rem,7vw,5rem)/1 Manrope;letter-spacing:-.08em;color:rgba(236,211,164,.78);text-align:center;padding:20px}.work-chip{position:absolute;top:12px;left:12px;z-index:3;background:rgba(0,0,0,.68);border:1px solid rgba(201,169,110,.34);border-radius:999px;padding:6px 9px;color:var(--gold2);font-size:.59rem;letter-spacing:.08em;text-transform:uppercase}.play-mark{position:absolute;z-index:3;right:14px;bottom:14px;width:38px;height:38px;border:1px solid rgba(255,255,255,.5);border-radius:50%;display:grid;place-items:center;color:white;background:rgba(0,0,0,.3)}.work-info{padding:15px}.work-info h3{font:700 1rem/1.3 Manrope;margin:0 0 7px}.work-info p{margin:0;color:var(--muted);font-size:.76rem;line-height:1.55}.work-meta{display:flex;justify-content:space-between;gap:8px;margin-top:13px;color:var(--gold);font-size:.62rem}.video-frame{width:100%;height:100%;object-fit:contain;position:absolute;inset:0;background:#050505}.work-media.has-video .work-art{display:none}.work-media.has-video:after{pointer-events:none}.project-link{display:inline-flex;margin-top:12px;color:var(--gold2);font-size:.73rem;font-weight:700}
     .carousel-arrow{position:absolute;z-index:5;top:39%;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(201,169,110,.42);background:rgba(12,12,11,.92);color:var(--gold2);font-size:1.65rem;line-height:1;cursor:pointer;transition:transform .2s,background .2s,border-color .2s,opacity .2s}.carousel-prev{left:0}.carousel-next{right:0}.carousel-arrow:hover:not(:disabled){transform:scale(1.08);background:rgba(201,169,110,.15);border-color:var(--gold)}.carousel-arrow:disabled{opacity:.25;cursor:default}
     .featured-card{border-color:rgba(201,169,110,.5);box-shadow:inset 0 0 0 1px rgba(201,169,110,.08)}.featured-ribbon{position:absolute;z-index:3;bottom:12px;left:12px;padding:5px 9px;border-radius:5px;background:rgba(201,169,110,.92);color:#100e09;font-size:.58rem;font-weight:800;letter-spacing:.12em}
-    .about-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 25%;border-radius:15px;border:1px solid rgba(201,169,110,.32);margin:18px 0 22px}
+    .about-photo{display:block;width:min(190px,72%);aspect-ratio:1/1;object-fit:cover;object-position:center 25%;border-radius:16px;border:1px solid rgba(201,169,110,.42);margin:18px auto 20px;box-shadow:0 12px 32px rgba(0,0,0,.28)}.about-panel{text-align:center}.about-panel .eyebrow{justify-content:center}.about-panel .eyebrow:before{display:none}.about-panel p{line-height:1.7;margin:10px 0 0}.about-copy{max-width:680px;text-align:left;justify-self:start}.about-copy h3{margin-bottom:18px}.about-copy p{line-height:1.8;margin:0 0 15px}.about-copy .tags{margin-top:22px}.upload-note{font-size:.69rem!important;color:#c9a96e!important;margin-top:9px!important;overflow-wrap:anywhere}
     /* about and services */
     .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px;align-items:start}.about-panel{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:linear-gradient(145deg,rgba(201,169,110,.1),rgba(255,255,255,.015))}.about-panel .big-ab{font:800 5rem/1 Manrope;letter-spacing:-.12em;color:var(--gold2)}.about-panel p{color:var(--muted);font-size:.9rem}.about-copy h3{font:800 clamp(1.8rem,3vw,2.6rem)/1.15 Manrope;letter-spacing:-.05em;margin:0 0 20px}.about-copy p{color:var(--muted)}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:23px}.tag{padding:8px 12px;border:1px solid rgba(255,255,255,.1);border-radius:999px;color:#d6d0c5;font-size:.75rem}.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{padding:24px 20px;border:1px solid rgba(255,255,255,.09);border-radius:18px;background:var(--panel);min-height:190px}.service-num{color:var(--gold);font-size:.72rem;letter-spacing:.14em}.service h3{font:700 1.05rem Manrope;margin:24px 0 8px}.service p{font-size:.8rem;color:var(--muted);margin:0}
     /* experience/tools */
@@ -102,11 +102,67 @@
         <article class="work-card reveal" data-category="motion"><div class="work-media has-video"><span class="work-chip">Before & After · Edit</span><video class="video-frame" controls preload="metadata" playsinline><source src="Before%20After_Umar.mp4" type="video/mp4"></video><span class="play-mark">▶</span></div><div class="work-info"><h3>Before & After — Umar</h3><p>A visual transformation edit showing the impact of thoughtful editing and presentation.</p><div class="work-meta"><span>Editing · Transformation</span><span>03 / 05</span></div></div></article>
         <article class="work-card reveal" data-category="motion"><div class="work-media has-video"><span class="work-chip">Before & After · Edit</span><video class="video-frame" controls preload="metadata" playsinline><source src="Before%20After_Khalid%20sir_updated.mp4" type="video/mp4"></video><span class="play-mark">▶</span></div><div class="work-info"><h3>Before & After — Khalid Sir</h3><p>A before-and-after showcase focused on clean pacing, visual polish and final presentation.</p><div class="work-meta"><span>Editing · Transformation</span><span>04 / 05</span></div></div></article>
         <article class="work-card reveal" data-category="motion"><div class="work-media"><span class="work-chip">Social Video · Short-form</span><div class="work-art">FEATURED<br>REEL</div><span class="play-mark">▶</span></div><div class="work-info"><h3>Featured Reel</h3><p>Short-form social content created to capture attention quickly and communicate a clear message.</p><div class="work-meta"><span>Social · Editing</span><span>05 / 05</span></div><a class="project-link" href="https://www.instagram.com/motion_graphics_with_ai/" target="_blank" rel="noopener">View Instagram portfolio ↗</a></div></article>
+        <article class="work-card reveal" data-category="ai">
+          <div class="work-media has-video">
+            <span class="work-chip">Video Project · 9:16</span>
+            <video class="video-frame" controls preload="metadata" playsinline><source src="https://raw.githubusercontent.com/amolnbhavsar-dev/portfolio/main/AI%20Automation.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+          </div>
+          <div class="work-info"><h3>AI Automation</h3><p>AI automation video project.</p><div class="work-meta"><span>AI Video · Automation</span><span>06</span></div></div>
+        </article>
+        <article class="work-card reveal" data-category="motion">
+          <div class="work-media has-video">
+            <span class="work-chip">Video Project · 9:16</span>
+            <video class="video-frame" controls preload="metadata" playsinline><source src="https://raw.githubusercontent.com/amolnbhavsar-dev/portfolio/main/Amol%2001_Updated.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+          </div>
+          <div class="work-info"><h3>Amol 01 Updated</h3><p>Video editing and motion design project.</p><div class="work-meta"><span>Video Editing · Motion</span><span>07</span></div></div>
+        </article>
+        <article class="work-card reveal" data-category="real-estate">
+          <div class="work-media has-video">
+            <span class="work-chip">Video Project · 9:16</span>
+            <video class="video-frame" controls preload="metadata" playsinline><source src="https://raw.githubusercontent.com/amolnbhavsar-dev/portfolio/main/Danube_updated.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+          </div>
+          <div class="work-info"><h3>Danube updated</h3><p>Danube real estate video project.</p><div class="work-meta"><span>Real Estate · Video</span><span>08</span></div></div>
+        </article>
+        <article class="work-card reveal" data-category="real-estate">
+          <div class="work-media has-video">
+            <span class="work-chip">Video Project · 9:16</span>
+            <video class="video-frame" controls preload="metadata" playsinline><source src="https://raw.githubusercontent.com/amolnbhavsar-dev/portfolio/main/Dubai.mp4" type="video/mp4">Your browser does not support HTML video.</video>
+          </div>
+          <div class="work-info"><h3>Dubai</h3><p>Dubai-focused video project.</p><div class="work-meta"><span>Dubai · Video</span><span>09</span></div></div>
+        </article>
+        <article class="work-card reveal" data-category="real-estate">
+          <div class="work-media">
+            <span class="work-chip">Video pending upload · 9:16</span>
+            <div class="work-art">Palm<br>Springs<br>Nakheel<br>Animated<br>V2</div><span class="play-mark" aria-hidden="true">＋</span>
+          </div>
+          <div class="work-info"><h3>Palm Springs Nakheel Animated V2</h3><p>Palm Springs / Nakheel animated video project.</p><div class="work-meta"><span>Real Estate · Animation</span><span>10</span></div><p class="upload-note">Upload <strong>Palm_Springs_Nakheel_Animated_V2.mp4</strong> to the repository root to enable playback.</p></div>
+        </article>
+        <article class="work-card reveal" data-category="real-estate">
+          <div class="work-media">
+            <span class="work-chip">Video pending upload · 9:16</span>
+            <div class="work-art">Rohit<br>melbourne</div><span class="play-mark" aria-hidden="true">＋</span>
+          </div>
+          <div class="work-info"><h3>Rohit melbourne</h3><p>Melbourne property video project.</p><div class="work-meta"><span>Property · Video</span><span>11</span></div><p class="upload-note">Upload <strong>Rohit_melbourne.mp4</strong> to the repository root to enable playback.</p></div>
+        </article>
+        <article class="work-card reveal" data-category="real-estate">
+          <div class="work-media">
+            <span class="work-chip">Video pending upload · 9:16</span>
+            <div class="work-art">Aldar</div><span class="play-mark" aria-hidden="true">＋</span>
+          </div>
+          <div class="work-info"><h3>Aldar</h3><p>Aldar video project.</p><div class="work-meta"><span>Real Estate · Video</span><span>12</span></div><p class="upload-note">Upload <strong>Aldar.mp4</strong> to the repository root to enable playback.</p></div>
+        </article>
+        <article class="work-card reveal" data-category="motion">
+          <div class="work-media">
+            <span class="work-chip">Video pending upload · 9:16</span>
+            <div class="work-art">Campaign<br>updated</div><span class="play-mark" aria-hidden="true">＋</span>
+          </div>
+          <div class="work-info"><h3>Campaign updated</h3><p>Campaign video project.</p><div class="work-meta"><span>Campaign · Editing</span><span>13</span></div><p class="upload-note">Upload <strong>Campaign_updated.mp4</strong> to the repository root to enable playback.</p></div>
+        </article>
           </div>
         </div>
         <button class="carousel-arrow carousel-next" type="button" aria-label="Scroll to next videos"><span aria-hidden="true">›</span></button>
       </div>
-      <p style="color:var(--muted);font-size:.72rem;margin-top:18px">To display your featured intro video, upload <strong>Amol_Intro_9x16_sfx_music_2.mp4</strong> to the repository root. Project links marked “Add / view project” are placeholders and should be replaced with the exact video URL.</p>
+      <p style="color:var(--muted);font-size:.72rem;margin-top:18px">Video previews play directly from the MP4 files stored in this GitHub repository. Four additional project cards are ready; upload their named MP4 files to the repository root to enable playback.</p>
     </div></section>
 
     <section class="section" id="about"><div class="wrap about-grid">
